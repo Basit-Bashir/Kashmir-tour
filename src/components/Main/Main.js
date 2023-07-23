@@ -109,7 +109,7 @@ const Main = () => {
       {/* Places Section */}
       <section className="py-16">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-semibold mb-8 text-green-700 underline">
+          <h2 className="text-4xl font-bold mb-8 text-green-700 underline text-center">
             Featured Places
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden cursor-pointer">
@@ -131,7 +131,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Floating Market Dal
                 </p>
               </motion.div>
@@ -148,7 +148,7 @@ const Main = () => {
               <img
                 src={img3}
                 alt="Place 1"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
 
               <motion.div
@@ -156,7 +156,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Gulmarg
                 </p>
               </motion.div>
@@ -180,7 +180,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Gurez Valley
                 </p>
               </motion.div>
@@ -204,7 +204,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Pahalgam
                 </p>
               </motion.div>
@@ -228,7 +228,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Pari Mahal Srinagar
                 </p>
               </motion.div>
@@ -252,7 +252,7 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
+                <p className="absolute top-10 text-center text-3xl font-semibold p-2 rounded-lg">
                   Tulip Garden Srinagar
                 </p>
               </motion.div>
