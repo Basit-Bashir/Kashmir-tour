@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const PricingCard = ({ plan, price, features }) => {
+const PricingCard = ({ plan, price, features, isValueForMoney }) => {
   return (
     <div className="flex flex-col bg-white p-8 rounded-lg shadow-md">
       <motion.h2
@@ -20,6 +20,16 @@ const PricingCard = ({ plan, price, features }) => {
       >
         &#8377; {price}
       </motion.div>
+      {isValueForMoney && (
+        <motion.p
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: plan * 0.2 }}
+          className="text-white text-center tracking-widest bg-orange-600 text-xl font-bold py-2 px-4 rounded-lg mb-4"
+        >
+          Value for Money
+        </motion.p>
+      )}
       <ul className="space-y-4 bg-transparent h-full">
         {features.map((feature) => (
           <motion.li
@@ -96,6 +106,7 @@ const Pricing = () => {
         "VIP access to attractions",
         "Personalized itinerary",
       ],
+      isValueForMoney: true,
     },
   ];
 
@@ -111,6 +122,7 @@ const Pricing = () => {
             plan={data.plan}
             price={data.price}
             features={data.features}
+            isValueForMoney={data.isValueForMoney || false}
           />
         ))}
       </div>

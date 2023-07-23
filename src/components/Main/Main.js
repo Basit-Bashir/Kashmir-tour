@@ -70,8 +70,6 @@ const Main = () => {
           </motion.button>
         </div>
       </section>
-
-      {/* Places Section */}
     </div>
   );
 };
