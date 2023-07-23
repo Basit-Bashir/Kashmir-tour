@@ -9,7 +9,7 @@ import img6 from "../Assets/imgs kashmir/pari.jpg";
 import img7 from "../Assets/imgs kashmir/tulip.jpg";
 
 const placeVariants = {
-  hidden: { x: -1000, y: -1000, opacity: 0 },
+  hidden: { x: -100, y: -100, opacity: 0 },
   visible: {
     x: 0,
     y: 0,
@@ -26,7 +26,7 @@ const Main = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = window.innerHeight * 0.8;
+      const scrollThreshold = window.innerHeight * 0.9;
       const scrollYValue = window.scrollY;
       if (scrollYValue >= scrollThreshold) {
         setIsVisible(true);
@@ -112,12 +112,11 @@ const Main = () => {
           <h2 className="text-4xl font-semibold mb-8 text-green-700 underline">
             Featured Places
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden cursor-pointer">
             <motion.div
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -129,18 +128,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Floating Market Dal
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -149,7 +142,6 @@ const Main = () => {
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -161,18 +153,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Gulmarg
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -180,7 +166,6 @@ const Main = () => {
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -192,18 +177,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Gurez Valley
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -211,7 +190,6 @@ const Main = () => {
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -223,18 +201,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Pahalgam
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -242,7 +214,6 @@ const Main = () => {
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -254,18 +225,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Pari Mahal Srinagar
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -273,7 +238,6 @@ const Main = () => {
               variants={placeVariants}
               initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}
               animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
@@ -285,18 +249,12 @@ const Main = () => {
 
               <motion.div
                 variants={placeVariants}
-                initial="hidden"
-                animate="visible"
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <motion.p
-                  whileHover={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
-                >
+                <p className="text-center text-3xl font-semibold p-2 rounded-lg">
                   Tulip Garden Srinagar
-                </motion.p>
+                </p>
               </motion.div>
             </motion.div>
           </div>
