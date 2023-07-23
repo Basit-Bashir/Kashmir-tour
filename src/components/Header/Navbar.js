@@ -10,9 +10,9 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const navLinks = [
-    { title: "Home", to: "home" },
-    { title: "Tours", to: "tours" },
     { title: "Places", to: "places" },
+    { title: "Plans", to: "plans" },
+    { title: "Tours", to: "tours" },
   ];
   return (
     <>
