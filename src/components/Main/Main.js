@@ -38,7 +38,6 @@ const Main = () => {
   };
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         <img src={img} alt="Hero" className="w-full h-full object-cover" />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
@@ -86,13 +85,18 @@ const Main = () => {
           <h2 className="text-4xl font-semibold mb-8 text-green-700 underline">
             Featured Places
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
-              <img src={img2} alt="Place 1" className="w-full h-full" />
+              <img
+                src={img2}
+                alt="Place 1"
+                className="w-full h-full object-cover"
+              />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -108,8 +112,8 @@ const Main = () => {
 
             {/* Featured Place 2 */}
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -129,8 +133,8 @@ const Main = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -151,8 +155,8 @@ const Main = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -173,8 +177,8 @@ const Main = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -195,8 +199,8 @@ const Main = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -219,8 +223,6 @@ const Main = () => {
           </div>
         </div>
       </section>
-
-      {/* Add more sections as needed */}
     </div>
   );
 };
