@@ -56,7 +56,7 @@ const Main = () => {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="md:text-2xl mb-8 text-orange-500 bg-transparent"
+            className="text-2xl mb-8 text-orange-500 bg-transparent"
           >
             Discover amazing places of Kashmir
           </motion.p>
@@ -64,7 +64,7 @@ const Main = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 2 }}
-            className="px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-all duration-300"
+            className="px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-800 transition-all duration-300"
           >
             Book Now
           </motion.button>
