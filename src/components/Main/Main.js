@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import img from "../Assets/imgs kashmir/dal.jpg";
 import img2 from "../Assets/imgs kashmir/dal2.jpg";
@@ -9,11 +9,35 @@ import img6 from "../Assets/imgs kashmir/pari.jpg";
 import img7 from "../Assets/imgs kashmir/tulip.jpg";
 
 const placeVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  hidden: { x: -1000, y: -1000, opacity: 0 },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
+    },
+  },
 };
 
 const Main = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 0.8;
+      const scrollYValue = window.scrollY;
+      if (scrollYValue >= scrollThreshold) {
+        setIsVisible(true);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const typingContainer = {
     hidden: { opacity: 0, y: "-10px" },
     show: {
@@ -24,6 +48,7 @@ const Main = () => {
       },
     },
   };
+
   const typingText = {
     hidden: { opacity: 0, y: "-20px" },
     show: {
@@ -36,8 +61,10 @@ const Main = () => {
       },
     },
   };
+
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         <img src={img} alt="Hero" className="w-full h-full object-cover" />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
@@ -87,8 +114,11 @@ const Main = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
@@ -104,23 +134,31 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
                   Floating Market Dal
-                </p>
+                </motion.p>
               </motion.div>
             </motion.div>
 
             {/* Featured Place 2 */}
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
                 src={img3}
-                alt="Place 2"
+                alt="Place 1"
                 className="w-full h-full object-cover"
               />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -128,20 +166,30 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">Gulmarg</p>
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
+                  Gulmarg
+                </motion.p>
               </motion.div>
             </motion.div>
 
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
                 src={img4}
-                alt="Place 2"
+                alt="Place 1"
                 className="w-full h-full object-cover"
               />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -149,21 +197,30 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
                   Gurez Valley
-                </p>
+                </motion.p>
               </motion.div>
             </motion.div>
+
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
                 src={img5}
-                alt="Place 2"
+                alt="Place 1"
                 className="w-full h-full object-cover"
               />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -171,21 +228,30 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
                   Pahalgam
-                </p>
+                </motion.p>
               </motion.div>
             </motion.div>
+
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
                 src={img6}
-                alt="Place 6"
+                alt="Place 1"
                 className="w-full h-full object-cover"
               />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -193,21 +259,30 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
                   Pari Mahal Srinagar
-                </p>
+                </motion.p>
               </motion.div>
             </motion.div>
+
             <motion.div
+              variants={placeVariants}
+              initial={{ opacity: 0 }}
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.8 }}
+              animate={isVisible ? "visible" : "hidden"}
               className="rounded-lg overflow-hidden shadow-md relative"
             >
               <img
                 src={img7}
-                alt="Place 7"
+                alt="Place 1"
                 className="w-full h-full object-cover"
               />
+
               <motion.div
                 variants={placeVariants}
                 initial="hidden"
@@ -215,9 +290,13 @@ const Main = () => {
                 transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex items-center justify-center"
               >
-                <p className="p-2 text-center text-lg font-semibold">
+                <motion.p
+                  whileHover={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="text-white text-center text-3xl font-semibold h-full w-full bg-transparent"
+                >
                   Tulip Garden Srinagar
-                </p>
+                </motion.p>
               </motion.div>
             </motion.div>
           </div>
