@@ -12,7 +12,8 @@ const Navbar = () => {
   const navLinks = [
     { title: "Places", to: "places" },
     { title: "Plans", to: "plans" },
-    { title: "Tours", to: "tours" },
+    { title: "Gallery", to: "gallery" },
+    { title: "Contact", to: "contact" },
   ];
   return (
     <>
