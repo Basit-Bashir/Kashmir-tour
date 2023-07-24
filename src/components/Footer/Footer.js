@@ -1,9 +1,15 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
-    <footer className="mt-8 bg-green-800 py-8">
+    <footer className="mt-8 bg-green-800 py-8 relative">
       <div className="container mx-auto text-center text-xl">
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -63,6 +69,11 @@ const Footer = () => {
           &copy; 2023 Travel Company. All rights reserved.
         </motion.p>
       </div>
+      <FontAwesomeIcon
+        icon={faArrowCircleUp}
+        onClick={scrollToTop}
+        className="bg-transparent text-white absolute md:right-6 right-2 bottom-2 text-4xl cursor-pointer"
+      />
     </footer>
   );
 };
