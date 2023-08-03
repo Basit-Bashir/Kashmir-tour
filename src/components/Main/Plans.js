@@ -109,11 +109,21 @@ const Pricing = () => {
       isValueForMoney: true,
     },
   ];
-
+  const text = "Our Plans";
   return (
     <div className="container mx-auto py-16">
       <h2 className="font-bold text-5xl text-center text-green-700 mb-8">
-        Our Plans
+        {text.split("").map((letter, id) => (
+          <span
+            key={id}
+            className={`inline-block animate-wave ${
+              letter === " " ? "ml-4" : ""
+            }`}
+            style={{ animationDelay: `${id * 0.1}s` }}
+          >
+            {letter}
+          </span>
+        ))}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pricingData.map((data) => (

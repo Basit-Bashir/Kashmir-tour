@@ -7,6 +7,7 @@ import Places from "./components/Main/Places";
 import PhotoGallery from "./components/Main/PhotoGallery";
 import InquiryForm from "./components/Footer/Contact";
 import Footer from "./components/Footer/Footer";
+import ArtAndCulture from "./components/Main/ArtCulture";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       </div>
       <div id="places">
         <Places />
+      </div>
+      <div id="art">
+        <ArtAndCulture />
       </div>
       <div id="plans">
         <Pricing />

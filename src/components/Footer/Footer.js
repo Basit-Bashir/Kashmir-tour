@@ -6,19 +6,28 @@ import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
   const scrollToTop = () => {
-    scroll.scrollToTop();
+    scroll.scrollToTop({
+      duration: 800,
+      smooth: "easeInOut",
+    });
   };
+  const text = "Contact Us";
   return (
     <footer className="mt-8 bg-green-800 py-8 relative">
       <div className="container mx-auto text-center text-xl">
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-4xl font-bold mb-4 text-green-700 animate-pulse"
-        >
-          Contact Us
-        </motion.p>
+        <p className="text-4xl font-bold mb-4 text-green-700 ">
+          {text.split("").map((letter, index) => (
+            <span
+              key={index}
+              className={`inline-block animate-wave bg-transparent ${
+                letter === " " ? "ml-2" : ""
+              }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {letter}
+            </span>
+          ))}
+        </p>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
