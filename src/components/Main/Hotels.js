@@ -66,7 +66,7 @@ const Hotels = () => {
                 ))}
               </Slider>
               <div className="p-4 flex flex-col justify-between flex-1 bg-white">
-                <h3 className="text-xl font-semibold text-green-500 mb-2 bg-transparent">
+                <h3 className="text-xl font-semibold text-green-500 mb-2 bg-transparent tracking-widest">
                   {hotel.name}
                 </h3>
                 <h3 className="text-xl font-semibold mb-2 bg-transparent">
