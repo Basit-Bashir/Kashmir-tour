@@ -75,7 +75,7 @@ const Pricing = () => {
   const pricingData = [
     {
       plan: "Basic",
-      price: "3000",
+      price: "7000",
       features: [
         "1-day tour to a local destination",
         "Experienced tour guide",
@@ -86,7 +86,7 @@ const Pricing = () => {
     },
     {
       plan: "Medium",
-      price: "7000",
+      price: "10,000",
       features: [
         "2-day tour to popular destinations",
         "Experienced tour guide",
@@ -97,7 +97,7 @@ const Pricing = () => {
     },
     {
       plan: "Pro",
-      price: "10,000",
+      price: "30,000",
       features: [
         "3-day tour to premium destinations",
         "Experienced tour guide",

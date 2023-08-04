@@ -5,6 +5,7 @@ import Main from "./components/Main/Main";
 import Pricing from "./components/Main/Plans";
 import Places from "./components/Main/Places";
 import PhotoGallery from "./components/Main/PhotoGallery";
+import Hotels from "./components/Main/Hotels";
 import InquiryForm from "./components/Footer/Contact";
 import Footer from "./components/Footer/Footer";
 import ArtAndCulture from "./components/Main/ArtCulture";
@@ -21,6 +22,9 @@ function App() {
       </div>
       <div id="art">
         <ArtAndCulture />
+      </div>
+      <div id="plans">
+        <Hotels />
       </div>
       <div id="plans">
         <Pricing />
