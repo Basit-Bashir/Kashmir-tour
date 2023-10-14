@@ -9,9 +9,11 @@ const Navbar = () => {
   const toggleNavBar = () => {
     setIsOpen(!isOpen);
   };
+
   const navLinks = [
     { title: "Places", to: "places" },
     { title: "Art", to: "art" },
+    { title: "Hotels", to: "hotels" },
     { title: "Plans", to: "plans" },
     { title: "Gallery", to: "gallery" },
     { title: "Contact", to: "contact" },
@@ -21,6 +23,7 @@ const Navbar = () => {
       <section className="space-x-4 p-6 bg-gradient-to-b from-green-500">
         <div className="flex place-items-center justify-between bg-transparent">
           <img src={img} alt="pic" className="h-14 w-auto" />
+
           <div className="hidden md:flex gap-8 bg-transparent">
             {navLinks.map(({ title, to }) => (
               <Link
